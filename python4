@@ -3,15 +3,12 @@ from PIL import Image
 image = Image.open("monro.jpg")
 red, green, blue = image.split()
 
-red = Image.open("redmonro.jpg")
 coordinates_red = ((100, 0, red.width, red.height))
 cropped_red = red.crop(coordinates_red)
 
-green = Image.open("greenmonro.jpg")
 coordinates_green = ((50, 0, green.width - 50, green.height))
 cropped_green = green.crop(coordinates_green)
 
-blue = Image.open("bluemonro.jpg")
 coordinates_blue = ((0, 0, blue.width - 100, green.height))
 cropped_blue = blue.crop(coordinates_blue)
 
